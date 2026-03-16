@@ -1,0 +1,60 @@
+/* ===== NOTIFICATIONS PAGE ===== */
+.notifications-layout {
+  max-width: 720px;
+  animation: fadeIn 0.35s ease-out;
+}
+
+.notifications-list { display: flex; flex-direction: column; gap: 0.6rem; }
+
+.notification-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  box-shadow: var(--shadow-xs);
+}
+
+.notification-item:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
+  border-color: rgba(106, 104, 223, 0.2);
+}
+
+.notification-item.unread {
+  border-left: 3px solid var(--primary);
+  background: linear-gradient(90deg, rgba(106, 104, 223, 0.04) 0%, var(--bg-card) 30%);
+}
+
+.notif-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notif-icon.print { background: rgba(106, 104, 223, 0.12); color: var(--primary); }
+.notif-icon.forum { background: rgba(239, 185, 149, 0.18); color: var(--accent-dark); }
+.notif-icon.note { background: rgba(74, 222, 128, 0.12); color: #16a34a; }
+.notif-icon.skill { background: rgba(251, 191, 36, 0.12); color: #b45309; }
+
+.notif-content { flex: 1; }
+.notif-content h4 { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.2rem; }
+.notif-content p { font-size: 0.8rem; color: var(--text-muted); }
+
+.notif-time { font-size: 0.75rem; color: var(--text-muted); white-space: nowrap; }
+
+.unread-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  flex-shrink: 0;
+}

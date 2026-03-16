@@ -1,0 +1,91 @@
+/* ===== SIDEBAR STYLES ===== */
+
+/* Sidebar nav items */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0;                     /* gap handled by margin on nav-icon */
+  padding: 0.65rem 0.9rem;
+  border-radius: 12px;
+  color: var(--text-muted);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+/* Icon container */
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: transparent;
+  flex-shrink: 0;
+  margin-right: 0.65rem;
+  transition: background 0.15s ease;
+}
+
+.nav-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+}
+
+/* Label */
+.nav-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+/* Hover state */
+.nav-item:hover {
+  background: var(--primary-container);
+  color: var(--primary);
+}
+
+.nav-item:hover .nav-icon {
+  background: rgba(106, 104, 223, 0.12);
+}
+
+/* Active state */
+.nav-item.active {
+  background: rgba(106, 104, 223, 0.12);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.nav-item.active .nav-icon {
+  background: rgba(106, 104, 223, 0.18);
+  color: var(--primary);
+}
+
+.nav-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 20%;
+  bottom: 20%;
+  width: 3px;
+  background: var(--primary);
+  border-radius: 0 3px 3px 0;
+}
+
+/* Sign-out danger item */
+.nav-item.nav-danger:hover {
+  background: rgba(239, 68, 68, 0.08);
+  color: #ef4444;
+}
+
+.nav-item.nav-danger:hover .nav-icon {
+  background: rgba(239, 68, 68, 0.1);
+}

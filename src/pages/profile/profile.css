@@ -1,0 +1,107 @@
+/* ===== PROFILE PAGE ===== */
+.profile-container {
+  max-width: 900px;
+  animation: fadeIn 0.35s ease-out;
+}
+
+.profile-header-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-header-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.profile-avatar-large {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-container);
+  flex-shrink: 0;
+  box-shadow: 0 4px 20px rgba(106, 104, 223, 0.25);
+}
+
+.profile-info { flex: 1; }
+.profile-info h1 { font-size: 1.6rem; font-weight: 700; }
+
+.profile-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.83rem;
+  color: var(--text-muted);
+}
+
+.profile-stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.stat-box { display: flex; flex-direction: column; }
+.stat-box .count { font-size: 1.4rem; font-weight: 700; color: var(--primary); }
+.stat-box .label { font-size: 0.75rem; color: var(--text-muted); }
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .profile-grid { grid-template-columns: 1fr; }
+  .profile-header-card { flex-direction: column; text-align: center; }
+  .profile-stats { justify-content: center; }
+  .profile-meta { justify-content: center; }
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem;
+  border-radius: var(--radius);
+  transition: background 0.2s;
+  border: 1px solid transparent;
+}
+
+.activity-item:hover {
+  background: var(--primary-container);
+  border-color: rgba(106, 104, 223, 0.15);
+}
+
+.activity-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius);
+  background: var(--primary-container);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.activity-content h4 { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.15rem; }
+.activity-content p { font-size: 0.78rem; color: var(--text-muted); }

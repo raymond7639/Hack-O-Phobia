@@ -1,0 +1,62 @@
+/* ===== PRINT HUB PAGE ===== */
+.print-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  animation: fadeIn 0.35s ease-out;
+}
+
+@media (max-width: 768px) {
+  .print-layout { grid-template-columns: 1fr; }
+}
+
+/* Upload Dropzone */
+.upload-dropzone {
+  border: 2px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background: var(--bg-main);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.upload-dropzone:hover, .upload-dropzone.dragover {
+  border-color: var(--primary);
+  background: var(--primary-container);
+}
+
+.upload-dropzone h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem; }
+
+/* Print Settings Form */
+.print-summary {
+  background: linear-gradient(135deg, rgba(106, 104, 223, 0.08) 0%, rgba(239, 185, 149, 0.08) 100%);
+  border: 1px solid rgba(106, 104, 223, 0.15);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+}
+
+/* History table */
+.history-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.history-item {
+  padding: 1rem 1.25rem;
+  background: var(--bg-main);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+}
+
+.history-item:hover {
+  background: var(--primary-container);
+  border-color: rgba(106, 104, 223, 0.2);
+}
+
+.history-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem; }
+.history-details { display: flex; gap: 0.75rem; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem; align-items: center; }
+
+.status-printing { background: rgba(59, 130, 246, 0.12); color: #1d4ed8; padding: 0.18rem 0.65rem; border-radius: var(--radius-full); font-size: 0.72rem; font-weight: 600; }
+.status-ready { background: rgba(74, 222, 128, 0.12); color: #16a34a; padding: 0.18rem 0.65rem; border-radius: var(--radius-full); font-size: 0.72rem; font-weight: 600; }
+.status-collected { background: var(--bg-input); color: var(--text-muted); padding: 0.18rem 0.65rem; border-radius: var(--radius-full); font-size: 0.72rem; font-weight: 600; }
