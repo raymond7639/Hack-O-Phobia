@@ -1,6 +1,6 @@
-#* Login Credentitals **
-email : example@gmail.com
-pass: 123example
+##Login Credentitals 
+- email : example@gmail.com
+- pass: 123example
 
 (u may enter any dummy data for logging)
 # React + Vite
