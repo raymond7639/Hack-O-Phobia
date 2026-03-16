@@ -1,3 +1,8 @@
+#* Login Credentitals **
+email : example@gmail.com
+pass: 123example
+
+(u may enter any dummy data for logging)
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
